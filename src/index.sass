@@ -1,0 +1,158 @@
+$blue-grey: #607D8B
+$blue-grey-50: #ECEFF1
+$blue-grey-100: #CFD8DC
+$blue-grey-200: #B0BEC5
+$blue-grey-300: #90A4AE
+$blue-grey-400: #78909C
+$blue-grey-500: #607D8B
+$blue-grey-600: #546E7A
+$blue-grey-700: #455A64
+$blue-grey-800: #37474F
+$blue-grey-900: #263238
+
+$grey: #9E9E9E
+$grey-50: #FAFAFA
+$grey-100: #F5F5F5
+$grey-200: #EEEEEE
+$grey-300: #E0E0E0
+$grey-400: #BDBDBD
+$grey-500: #9E9E9E
+$grey-600: #757575
+$grey-700: #616161
+$grey-800: #424242
+$grey-900: #212121
+
+=transparent
+  opacity: 0.5
+
+=paper
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+  transition: all 0.5s ease-in-out
+  &:hover
+    box-shadow:  0 5px 15px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23)
+
+
+=square
+  height: 300px
+  width: 300px
+
+=cover
+  width: 800px
+  height: 80vh
+
+=black
+  font-family: 'Open Sans','Helvetica Neue',Arial,'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif
+  line-height: 1.7
+  font-size: 16px
+  font-weight: 400
+
+=center
+  display: flex
+  align-items: center
+  justify-content: center
+
+=hover
+  &:hover
+    z-index: 99
+    background: white
+    opacity: 0.8
+
+=step-back
+  margin-top: -50px
+  margin-left: -50px
+
+=step-forward
+  margin-top: 50px
+  margin-left: 50px
+
+body
+  background-color: $blue-grey-100
+  color: $blue-grey-700
+  +black
+
+.container
+  +center
+
+.cover
+  +cover
+  +paper
+  +center
+  +hover
+  +step-back
+  background: $blue-grey-50
+  color: white
+  font-size: 25px
+  text-shadow: $blue-grey-200 3px 3px
+  position: fixed
+
+
+.list
+  +transparent
+  +paper
+  +step-forward
+  background: $blue-grey-50
+  width: 800px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: stretch
+  +hover
+  +center
+
+.item
+  width: 90%
+  margin-top: 20px
+
+//.cover
+//  background: $blue-grey-400
+//  opacity: 0.8
+//  +title
+//  +paper
+//
+//.one, .two
+//  background: $blue-grey-100
+//  opacity: 0.5
+//  +paper
+//  +square
+//  position: absolute
+//  &:hover
+//    z-index: 99
+//    background: $blue-grey-50
+//    color: white
+//    opacity: 0.6
+//
+//.one
+//  top: 100px
+//  left: 100px
+//
+//body
+//  background: $blue-grey-200
+//
+//.paper
+//  background: white
+//  width: 80%
+//  padding: 10px 30px
+//  margin: auto
+//  margin-top: 10px
+//  margin-bottom: 20px
+//  +paper
+//  opacity: 0.9
+//  color: $blue-grey-900
+//
+//.flex
+//  +paper
+//  position: fixed
+//
+//.list
+//  +transparent
+//  background: $blue-grey-50
+//  width: 800px
+//  display: flex
+//  flex-direction: column
+//  justify-content: center
+//  align-items: stretch
+//
+//.container
+//  display: flex
+//  align-items: center
+//  justify-content: center
